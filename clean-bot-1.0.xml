@@ -21,8 +21,9 @@
     </asset>
 
     <worldbody>
-        <joint type="free" />
+       
         <geom type="mesh" name="body-geom" mesh="body" />
+         <joint type="free" />
             <body name="body1" pos="0 0 0">
                 <joint axis="0 0 1" pos="0 0 0 "/>
                 <geom type="mesh" mesh="right-hip"/>
