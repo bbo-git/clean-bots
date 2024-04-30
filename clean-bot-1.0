@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="clean-bot-1">
+    <compiler angle="degree" inertiafromgeom="true" meshdir="geom/" />
+    <option timestep="0.0001"/>
+    <asset>
+        <mesh name="body" file="body.stl"/>
+        <mesh name="right-hip" file="right-hip.stl"/>
+        <mesh name="right-upper-leg" file="right-upper-leg.stl"/>
+        <mesh name="right-lower-leg" file="right-lower-leg.stl"/>
+        <mesh name="right-foot" file="right-foot.stl"/>
+        <mesh name="left-hip" file="left-hip.stl"/>
+        <mesh name="left-upper-leg" file="left-upper-leg.stl"/>
+        <mesh name="left-lower-leg" file="left-lower-leg.stl"/>
+        <mesh name="left-foot" file="left-foot.stl"/>
+
+        <material name="gray" rgba="0.4 0.4 0.4 1"/>
+        <material name="light_gray" rgba="0.8 0.8 0.8 1"/>
+        <material name="black" rgba="0 0 0 1"/>
+        <material  name="orange" rgba="1 0.423529 0.0392157 1"/>
+        <material name="red" rgba="1 0 0 1"/>
+    </asset>
+
+    <worldbody>
+        <joint type="free" />
+        <geom type="mesh" name="body-geom" mesh="body" />
+            <body name="body1" pos="0 0 0">
+                <joint axis="0 0 1" pos="0 0 0 "/>
+                <geom type="mesh" mesh="right-hip"/>
+
+    </worldbody>
+    
+</mujoco>
